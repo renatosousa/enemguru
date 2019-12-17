@@ -11,6 +11,6 @@ export class QuestService {
   constructor(private http: HttpClient) { }
 
   public nextQuestion():Observable<any>{
-    return this.http.get('https://jsonplaceholder.typicode.com/photos');
+    return this.http.get('https://my-json-server.typicode.com/renatosousa/json/questions/');
   }
 }

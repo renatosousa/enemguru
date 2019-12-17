@@ -1,4 +1,16 @@
-<div *ngFor="let q of questions">
-  <h1>{{q.title}}</h1>
-  <img [attr.src]="q.url" alt="">
+<div class="container">
+  <div class="card" *ngFor="let q of questions">
+    <h1>Questão {{q.identificador}}</h1>
+    <p>{{q.enunciado}}</p>
+    <img [attr.src]="q.imagem" alt="">
+    <div *ngFor="let a of q.alternativas; let i=index">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="alternativas" id="option{{i}}" value="a.letra">
+        <label class="form-check-label" for="option{{i}}">{{a.letra + " " + a.texto}}</label>
+        <p></p>
+      </div>  
+    </div>
+  </div>
 </div>
+
+

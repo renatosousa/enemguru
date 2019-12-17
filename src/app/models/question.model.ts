@@ -1,7 +1,7 @@
 export class Question {
-  public albumId: number;
   public  id: number;
-  public  title: string;
-  public  url: string;
-  public  thumbnailUrl: string;
+  public identificador: string;
+  public  enunciado: string;
+  public  alternativas: any[];
+  public  imagem: string;
 }
